@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div>
+                <h1>Student Expense Tracker</h1>
+                <p>
+                    Kelola keuangan bulanan Anda dengan lebih cerdas dan teratur.
+                </p>
+            </div>
+        </header>
+
+
+        <!-- SUMMARY -->
+        <section class="summary">
+
+            <div class="summary-card">
+                <span>Pengeluaran Hari Ini</span>
+                <h2 id="todayExpense">Rp 0</h2>
+            </div>
+
+            <div class="summary-card">
+                <span>Total Bulan Ini</span>
+                <h2 id="monthlyExpense">Rp 0</h2>
+            </div>
+
+            <div class="summary-card budget-card">
+                <span>Sisa Anggaran</span>
+                <h2 id="remainingBudget">Rp 1.500.000</h2>
+            </div>
+
+        </section>
+
+
+        <!-- FORM -->
+        <section class="expense-form">
+
+            <div class="form-group">
+                <label for="description">
+                    Deskripsi
+                </label>
+
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="Contoh: Makan siang di kantin"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="amount">
+                    Nominal (Rp)
+                </label>
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="50000"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="category">
+                    Kategori
+                </label>
+
+                <select id="category">
+                    <option value="Makanan">Makanan</option>
+                    <option value="Transportasi">Transportasi</option>
+                    <option value="Kuliah">Kuliah</option>
+                    <option value="Hiburan">Hiburan</option>
+                    <option value="Lainnya">Lainnya</option>
+                    <option value="Uang Saku">Uang Saku</option>
+                </select>
+            </div>
+
+
+            <button id="addExpense">
+                Tambah
+            </button>
+
+        </section>
+
+
+        <!-- TABLE -->
+        <section class="expense-table">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Deskripsi</th>
+                        <th>Kategori</th>
+                        <th>Nominal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="expenseList">
+
+                    <tr>
+                        <td colspan="5">
+                            Belum ada data pengeluaran.
+                            Silakan tambahkan di atas.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+
+   <script type="module" src="script.js"></script>
+
+</body>
+</html>
